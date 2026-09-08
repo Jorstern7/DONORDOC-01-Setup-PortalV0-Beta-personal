@@ -3876,7 +3876,7 @@ main .consultation .consultation__secure-icon svg {
   background: #fff;
 }
 .final-cta .final-cta__card {
-  background: #f6f8f5;
+  background: #f8f9fa;
   border-radius: 24px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
   padding: 48px 56px;
@@ -4227,7 +4227,7 @@ main .consultation .consultation__secure-icon svg {
   padding: 0 0 64px;
 }
 #footer .site-footer__card {
-  background: #f6f8f5;
+  background: #f8f9fa;
   border: 1px solid #e9ecef;
   border-radius: 16px;
   overflow: hidden;
@@ -4347,7 +4347,7 @@ main .consultation .consultation__secure-icon svg {
 #footer .site-footer__bar {
   border-top: 1px solid #e9ecef;
   padding: 20px 40px;
-  background: #f6f8f5;
+  background: #f8f9fa;
 }
 #footer .site-footer__bar-inner {
   display: grid;
@@ -4411,7 +4411,7 @@ main .consultation .consultation__secure-icon svg {
     padding: 0;
     border: 1px solid #e9ecef;
     border-radius: 16px;
-    background: #f6f8f5;
+    background: #f8f9fa;
     overflow: hidden;
   }
   #footer .footer__grid {
@@ -4539,7 +4539,7 @@ main .consultation .consultation__secure-icon svg {
     margin-top: 12px;
     border: 1px solid #e9ecef;
     border-radius: 12px;
-    background: #f6f8f5;
+    background: #f8f9fa;
     padding: 24px 20px;
   }
   #footer .site-footer__bar-inner {

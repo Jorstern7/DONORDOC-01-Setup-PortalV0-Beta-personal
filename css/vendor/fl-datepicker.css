@@ -7,9 +7,6 @@
 
 /* ── Theme tokens ─────────────────────────────────── */
 .fl-picker {
-  --fl-primary: #37b24d;
-  --fl-primary-hover: #2f9e44;
-  --fl-primary-light: #e6f9ed;
   --fl-bg: #ffffff;
   --fl-text: #333333;
   --fl-text-muted: #999999;
@@ -17,7 +14,6 @@
   --fl-radius: 4px;
   --fl-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   --fl-error: #e03131;
-  --fl-today-outline: #37b24d;
   --fl-disabled: #ccc;
   --fl-font: inherit;
 }
@@ -61,13 +57,13 @@
 
 /* Programmatic focus when overlay is open */
 .fl-picker.fl-picker--focused .fl-picker-input {
-  border-color: var(--fl-primary);
-  box-shadow: 0 0 6px rgba(55, 178, 77, 1);
+  border-color: var(--color-brand);
+  box-shadow: 0 0 6px var(--color-brand);
 }
 
 .fl-picker-input:hover {
-  border-color: var(--fl-primary);
-  box-shadow: 0 0 6px rgba(55, 178, 77, 1);
+  border-color: var(--color-brand);
+  box-shadow: 0 0 6px var(--color-brand);
 }
 
 /* Error state */
@@ -167,7 +163,7 @@
 }
 
 .fl-calendar-nav:hover:not(:disabled) {
-  background: var(--fl-primary-light);
+  background: var(--color-brand-soft);
 }
 
 .fl-calendar-nav:disabled {
@@ -177,7 +173,7 @@
 }
 
 .fl-calendar-nav:focus-visible {
-  outline: 2px solid var(--fl-primary);
+  outline: 2px solid var(--color-brand);
   outline-offset: 2px;
 }
 
@@ -224,11 +220,11 @@
 }
 
 .fl-calendar-day:hover {
-  background: var(--fl-primary-light);
+  background: var(--color-brand-soft);
 }
 
 .fl-calendar-day:focus-visible {
-  outline: 2px solid var(--fl-primary);
+  outline: 2px solid var(--color-brand);
   outline-offset: -2px;
 }
 
@@ -241,12 +237,12 @@
 /* Today */
 .fl-calendar-day--today {
   font-weight: 700;
-  box-shadow: inset 0 0 0 2px var(--fl-today-outline);
+  box-shadow: inset 0 0 0 2px var(--color-brand);
 }
 
 /* Selected */
 .fl-calendar-day--selected {
-  background: var(--fl-primary) !important;
+  background: var(--color-brand) !important;
   color: #fff !important;
   font-weight: 600;
 }
@@ -297,16 +293,16 @@
 }
 
 .fl-timelist-option:hover {
-  background: var(--fl-primary-light);
+  background: var(--color-brand-soft);
 }
 
 .fl-timelist-option:focus-visible {
-  outline: 2px solid var(--fl-primary);
+  outline: 2px solid var(--color-brand);
   outline-offset: -2px;
 }
 
 .fl-timelist-option--selected {
-  background: var(--fl-primary) !important;
+  background: var(--color-brand) !important;
   color: #fff !important;
   font-weight: 600;
 }

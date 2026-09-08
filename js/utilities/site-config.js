@@ -105,6 +105,37 @@ function applyTheme(config) {
     document.head.appendChild(themeMeta);
   }
   themeMeta.setAttribute("content", theme.manifestThemeColor);
+  applyManifest(theme);
+}
+
+function applyManifest(theme) {
+  const link = document.querySelector('link[rel="manifest"]');
+  if (!link) return;
+  const manifest = {
+    name: "Donordoc-01",
+    short_name: "Donordoc",
+    icons: [
+      {
+        src: "/android-chrome-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        src: "/android-chrome-512x512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
+    theme_color: theme.manifestThemeColor,
+    background_color: theme.manifestBackgroundColor,
+    display: "standalone",
+  };
+  const url = URL.createObjectURL(
+    new Blob([JSON.stringify(manifest)], { type: "application/manifest+json" }),
+  );
+  if (link.dataset.manifestUrl) URL.revokeObjectURL(link.dataset.manifestUrl);
+  link.dataset.manifestUrl = url;
+  link.setAttribute("href", url);
 }
 
 function applySeo(config) {
@@ -289,41 +320,6 @@ function applySectionLists(config) {
 
   const how = document.querySelector('[data-section="howItWorks"]');
   if (how && sections.howItWorks) {
-    const headline = sections.howItWorks.headline;
-    if (headline?.desktop) {
-      const parts = how.querySelectorAll(
-        ".how-it-works__heading-desktop .how-it-works__heading-part",
-      );
-      if (parts[0]) parts[0].textContent = headline.desktop.first;
-      if (parts[1]) parts[1].textContent = headline.desktop.second;
-    }
-    if (headline?.mobile) {
-      const mobile = how.querySelector(".how-it-works__heading-mobile");
-      if (mobile) {
-        const accent = mobile.querySelector(
-          ".how-it-works__heading-part-accent",
-        );
-        if (accent) {
-          const idx = headline.mobile.lastIndexOf(accent.textContent.trim());
-          if (idx >= 0) {
-            const walker = document.createTreeWalker(
-              mobile,
-              NodeFilter.SHOW_TEXT,
-              {
-                acceptNode: function (node) {
-                  return node.textContent.trim() &&
-                    node.parentElement !== accent
-                    ? NodeFilter.FILTER_ACCEPT
-                    : NodeFilter.FILTER_SKIP;
-                },
-              },
-            );
-            const first = walker.nextNode();
-            if (first) first.textContent = headline.mobile.slice(0, idx);
-          }
-        }
-      }
-    }
     const groups = sections.howItWorks.groups || [];
     const labels = how.querySelectorAll(".how-it-works__part-header-label");
     groups.forEach(function (group, index) {
@@ -385,7 +381,11 @@ function applySectionLists(config) {
         img.setAttribute("alt", item.image.alt || item.name);
       }
       if (stars && item.rating) {
-        stars.setAttribute("aria-label", item.rating + " out of 5 stars");
+        const rating = Number(item.rating) || 0;
+        stars.setAttribute("aria-label", rating + " out of 5 stars");
+        stars.querySelectorAll("svg").forEach(function (star, index) {
+          star.style.opacity = index < rating ? "1" : "0.22";
+        });
       }
     },
   );
@@ -441,16 +441,6 @@ function applySectionLists(config) {
       email.setAttribute("href", "mailto:" + sections.footer.contact.email);
       setTextPreserveChildren(email, sections.footer.contact.email);
     }
-    const contactItems = footer.querySelectorAll(".footer__contact-list li span");
-    contactItems.forEach(function (span) {
-      const text = span.textContent;
-      if (text.includes("SE 2nd") && sections.footer.contact?.address) {
-        setTextPreserveChildren(span, sections.footer.contact.address);
-      }
-      if (text.includes("Mon") && sections.footer.contact?.hours) {
-        setTextPreserveChildren(span, sections.footer.contact.hours);
-      }
-    });
     const desc = footer.querySelector(".footer__brand-desc");
     if (desc && sections.footer.description) desc.textContent = sections.footer.description;
     const secure = footer.querySelector(".site-footer__bar-secure");

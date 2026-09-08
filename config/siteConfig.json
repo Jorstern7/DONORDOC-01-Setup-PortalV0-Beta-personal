@@ -4,7 +4,7 @@
     "configVersion": 1
   },
   "theme": {
-    "variant": "executiveNavy"
+    "variant": "trustGreen"
   },
   "seo": {
     "title": "Default DONORDOC-01 Title",
@@ -101,7 +101,11 @@
     "services": {
       "enabled": true,
       "eyebrow": "How We Can Help",
-      "headline": "Helping You Find Coverage That Fits Your Life",
+      "headline": {
+        "main": "Helping You Find Coverage",
+        "mid": "That",
+        "accent": "Fits Your Life"
+      },
       "description": "Explore the types of health coverage our licensed advisors can help you understand and compare.",
       "items": [
         {
@@ -141,7 +145,10 @@
     "pricing": {
       "enabled": true,
       "eyebrow": "Coverage Options & Pricing",
-      "headline": "Find Coverage That Fits Your Needs",
+      "headline": {
+        "main": "Find Coverage That",
+        "accent": "Fits Your Needs"
+      },
       "description": "Simple, transparent pricing for personalized guidance from licensed advisors you can trust.",
       "plans": [
         {
@@ -201,7 +208,10 @@
           "first": "You Bring Your Goals",
           "second": "We Bring The Guidance"
         },
-        "mobile": "You Bring Your Goals. We Bring The Guidance."
+        "mobile": {
+          "first": "You Bring Your Goals. We Bring",
+          "accent": "The Guidance."
+        }
       },
       "description": "Tell us what matters most to you. We'll help you compare options, understand your choices, and find coverage that fits your life and budget.",
       "groups": [
@@ -250,7 +260,10 @@
     },
     "reviews": {
       "enabled": true,
-      "headline": "Real People. Real Peace of Mind.",
+      "headline": {
+        "main": "Real People.",
+        "accent": "Real Peace of Mind."
+      },
       "description": "See how DONORDOC has helped individuals and families navigate health coverage with confidence.",
       "items": [
         {
@@ -293,7 +306,11 @@
     },
     "faq": {
       "eyebrow": "QUESTIONS?",
-      "headline": "Let's Clear Things Up.",
+      "headline": {
+        "before": "Let's",
+        "accent": "Clear",
+        "after": "Things Up."
+      },
       "description": "Before you schedule a consultation, here are the answers to the questions we hear most often.",
       "items": [
         {
@@ -341,7 +358,10 @@
     },
     "consultation": {
       "enabled": true,
-      "headline": "Ready to Speak With a Licensed Advisor?",
+      "headline": {
+        "main": "Ready to Speak With a",
+        "accent": "Licensed Advisor?"
+      },
       "description": "Our licensed advisors are here to help you compare plans, answer your questions, and find coverage that fits your needs and budget.",
       "benefits": [
         {
@@ -443,7 +463,10 @@
     },
     "finalCta": {
       "badge": "Let's Get Started",
-      "headline": "Ready to Find Coverage With Confidence?",
+      "headline": {
+        "main": "Ready to Find Coverage",
+        "accent": "With Confidence?"
+      },
       "description": "Speak with a licensed advisor and get guidance tailored to your needs. It's free and hassle-free.",
       "image": {
         "src": "assets/images/final-cta-image.webp",
