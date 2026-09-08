@@ -3,6 +3,7 @@ Website System Name: DONORDOC-01 V1
 Author: FRONTLENS LLC
 License: For personal/business use only. Redistribution, resale, or sublicensing is strictly Copyright (c) 2026 FRONTLENS LLC. All rights reserved.
 */
+import { getSiteConfig } from "../utilities/site-config.js";
 function escapeHtml(value) {
   return String(value)
     .replace(/&/g, "&amp;")
@@ -16,7 +17,7 @@ function renderFaqItem(item, index) {
   const number = String(index + 1).padStart(2, "0");
   const triggerId = `faq-trigger-${number}`;
   const panelId = `faq-panel-${number}`;
-  const isOpen = Boolean(item.open);
+  const isOpen = Boolean(item.openByDefault || item.open);
   const question = escapeHtml(item.question || "");
   const answer = escapeHtml(item.answer || "");
 
@@ -154,23 +155,14 @@ export function initFaqAccordion() {
     const faqList = document.getElementById("faq-list");
     if (!section || !faqList) return;
 
-    fetch("config/faq.json")
-      .then(function (response) {
-        if (!response.ok) {
-          throw new Error("Failed to load faq.json");
-        }
-        return response.json();
-      })
-      .then(function (config) {
-        const items = Array.isArray(config?.items) ? config.items : [];
-        if (!items.length) return;
+    const config = getSiteConfig();
+    const items = Array.isArray(config?.sections?.faq?.items)
+      ? config.sections.faq.items
+      : [];
+    if (!items.length) return;
 
-        faqList.innerHTML = items.map(renderFaqItem).join("");
-        wireFaqAccordion(section);
-      })
-      .catch(function (error) {
-        console.error("initFaqAccordion error:", error);
-      });
+    faqList.innerHTML = items.map(renderFaqItem).join("");
+    wireFaqAccordion(section);
   } catch (e) {
     console.error("initFaqAccordion error:", e);
   }

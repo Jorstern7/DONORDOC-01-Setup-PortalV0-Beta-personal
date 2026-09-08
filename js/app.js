@@ -8,7 +8,7 @@ import { initPreloader } from "./components/preloader.js";
 import { initStickyHeader, initNavScroll, initMobileMenu } from "./components/navigation.js";
 import { initBackToTop } from "./components/back-to-top.js";
 import { initLazyImages } from "./utilities/lazy-images.js";
-import { initSectionVisibility } from "./utilities/section-visibility.js";
+import { initSiteConfig } from "./utilities/site-config.js";
 import { initPricing } from "./sections/pricing.js";
 import { initTestimonials } from "./sections/testimonials.js";
 import { initServicesReveal } from "./sections/services.js";
@@ -19,19 +19,20 @@ import { initFooterYear, initFooterAccordion } from "./sections/footer.js";
 initPreloader();
 
 document.addEventListener("DOMContentLoaded", function () {
-  initStickyHeader();
-  initNavScroll();
-  initMobileMenu();
-  initPricing();
-  initTestimonials();
-  initServicesReveal();
-  initBackToTop();
-  initLazyImages();
-  initFooterYear();
-  initSectionVisibility();
-  initConsultationSection();
-  initFaqAccordion();
-  initFooterAccordion();
+  initSiteConfig().then(function () {
+    initStickyHeader();
+    initNavScroll();
+    initMobileMenu();
+    initPricing();
+    initTestimonials();
+    initServicesReveal();
+    initBackToTop();
+    initLazyImages();
+    initFooterYear();
+    initConsultationSection();
+    initFaqAccordion();
+    initFooterAccordion();
+  });
 
   window.addEventListener("load", () => {
     if (location.hash == "#health-cta") window.scrollTo(0, 0);

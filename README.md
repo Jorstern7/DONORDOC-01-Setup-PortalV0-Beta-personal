@@ -13,7 +13,7 @@ Do not change visual design, copy, or interactions unless Frontlens asks.
 - `js/app.js` — JavaScript entry (`type="module"`)
 - `js/components/`, `js/sections/`, `js/utilities/` — feature modules
 - `js/vendor/` — FLDatePicker (global)
-- `config/` — `sections.json` and `faq.json`
+- `config/` — `siteConfig.json` and `themeRegistry.js`
 - `assets/images/` — image assets
 
 Empty `pages/`, `assets/icons/`, and `assets/fonts/` are omitted until those files exist.

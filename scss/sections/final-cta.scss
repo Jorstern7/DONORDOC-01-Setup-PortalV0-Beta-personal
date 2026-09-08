@@ -201,7 +201,7 @@
       to right,
       $color-brand-muted 0%,
       $color-brand-muted 40%,
-      rgba($color-brand-muted, 0.35) 65%,
+      color-mix(in srgb, $color-brand-muted 35%, transparent) 65%,
       transparent 85%
     );
     pointer-events: none;

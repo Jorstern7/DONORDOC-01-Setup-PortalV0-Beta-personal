@@ -1,0 +1,522 @@
+{
+  "system": {
+    "websiteSystemId": "DONORDOC-01",
+    "configVersion": 1
+  },
+  "theme": {
+    "variant": "executiveNavy"
+  },
+  "seo": {
+    "title": "Default DONORDOC-01 Title",
+    "description": "Default DONORDOC-01 description",
+    "canonicalUrl": "https://example.com/",
+    "socialSharing": {
+      "title": "Default Social Title",
+      "description": "Default Social Description",
+      "image": "https://example.com/social-image.jpg",
+      "url": "https://example.com/"
+    }
+  },
+  "branding": {
+    "logo": {
+      "src": "assets/images/donordoc-new-logo.webp",
+      "alt": "DONORDOC"
+    },
+    "favicon": {
+      "src": "/favicon.ico"
+    }
+  },
+  "navigation": {
+    "items": [
+      { "id": "home", "label": "Home", "href": "#health-cta" },
+      { "id": "about", "label": "About", "href": "#about-cta" },
+      { "id": "coverage", "label": "Coverage Options", "href": "#services-cta" },
+      { "id": "howItWorks", "label": "How It Works", "href": "#how-it-works-cta" },
+      { "id": "reviews", "label": "Reviews", "href": "#testimonials-cta" },
+      { "id": "faq", "label": "FAQ", "href": "#faq-cta" }
+    ],
+    "primaryAction": { "label": "Compare Plans", "href": "#pricing-cta" },
+    "secondaryAction": { "label": "Talk to an Advisor", "href": "#consultation-cta" }
+  },
+  "sections": {
+    "hero": {
+      "enabled": true,
+      "eyebrow": "Licensed Health Insurance Advisors",
+      "headline": {
+        "main": "Helping You Navigate Health Coverage",
+        "accent": "With Confidence"
+      },
+      "description": "We help you understand your options, compare plans, and find coverage that fits your health needs and budget.",
+      "benefits": [
+        { "text": "Personalized plan guidance" },
+        { "text": "Multiple trusted carriers" },
+        { "text": "Ongoing support after enrollment" }
+      ],
+      "primaryCta": { "label": "Compare Plans", "href": "#pricing-cta" },
+      "secondaryCta": { "label": "Talk to an Advisor", "href": "#consultation-cta" },
+      "trustLine": "Secure. Private. No obligation.",
+      "image": {
+        "mode": "theme",
+        "customSrc": null,
+        "alt": ""
+      },
+      "floatingCard": {
+        "line1": "Your health.",
+        "line2": "Your choice.",
+        "line3": "We're here to help."
+      }
+    },
+    "trust": {
+      "enabled": true,
+      "stats": [
+        { "value": "50,000+", "label": "Families Served" },
+        { "value": "25+", "label": "Top Insurance Carriers" },
+        { "value": "U.S. Based", "label": "Support Team" },
+        { "value": "4.9/5", "label": "Customer Rating" }
+      ],
+      "benefits": [
+        {
+          "title": "No hidden fees",
+          "description": "Transparent information, clear pricing."
+        },
+        {
+          "title": "Real support, anytime",
+          "description": "Speak with a real person when you need help."
+        },
+        {
+          "title": "Guidance you can trust",
+          "description": "Licensed advisors. Better health decisions."
+        }
+      ]
+    },
+    "about": {
+      "eyebrow": "About DONORDOC",
+      "headline": "Coverage Guidance You Can Trust",
+      "description": "Our mission is simple: help individuals and families understand their options, compare plans with clarity, and receive support before, during, and after enrollment.",
+      "image": {
+        "src": "assets/images/about-image.webp",
+        "alt": "A family meeting with a health coverage advisor"
+      }
+    },
+    "services": {
+      "enabled": true,
+      "eyebrow": "How We Can Help",
+      "headline": "Helping You Find Coverage That Fits Your Life",
+      "description": "Explore the types of health coverage our licensed advisors can help you understand and compare.",
+      "items": [
+        {
+          "id": "preventiveCare",
+          "title": "Preventive Care",
+          "description": "Stay ahead of health issues with routine screenings and wellness visits.",
+          "shortDescription": "Stay ahead with routine screenings and wellness visits."
+        },
+        {
+          "id": "hospitalCoverage",
+          "title": "Hospital Coverage",
+          "description": "Financial protection for unexpected medical events and hospital stays."
+        },
+        {
+          "id": "prescriptionCoverage",
+          "title": "Prescription Coverage",
+          "description": "Access to affordable medications when you need them."
+        },
+        {
+          "id": "emergencyCoverage",
+          "title": "Emergency Coverage",
+          "description": "Protection for urgent and unexpected medical situations."
+        },
+        {
+          "id": "mentalHealthCoverage",
+          "title": "Mental Health Coverage",
+          "description": "Support for emotional and behavioral health needs."
+        },
+        {
+          "id": "specialistCare",
+          "title": "Specialist Care",
+          "description": "Access to specialized care and treatment options."
+        }
+      ],
+      "cta": { "label": "Explore Coverage Options", "href": "#pricing-cta" }
+    },
+    "pricing": {
+      "enabled": true,
+      "eyebrow": "Coverage Options & Pricing",
+      "headline": "Find Coverage That Fits Your Needs",
+      "description": "Simple, transparent pricing for personalized guidance from licensed advisors you can trust.",
+      "plans": [
+        {
+          "id": "individual",
+          "name": "Individual Coverage",
+          "badge": null,
+          "description": "Ideal for individuals looking for personal health coverage.",
+          "price": { "prefix": "Starting at", "amount": "$49", "suffix": "/month" },
+          "features": [
+            "Compare top health plans",
+            "Licensed advisor guidance",
+            "Enrollment support",
+            "Carrier recommendations"
+          ],
+          "cta": { "label": "Get Started", "href": "#" }
+        },
+        {
+          "id": "family",
+          "name": "Family Coverage",
+          "badge": "Most Popular",
+          "description": "Comprehensive coverage options for you and your loved ones.",
+          "price": { "prefix": "Starting at", "amount": "$99", "suffix": "/month" },
+          "features": [
+            "Family plan comparisons",
+            "Dependent coverage review",
+            "Enrollment assistance",
+            "Ongoing support"
+          ],
+          "cta": { "label": "Get Started", "href": "#" }
+        },
+        {
+          "id": "premium",
+          "name": "Premium Guidance",
+          "badge": null,
+          "description": "Personalized support and expert advice for complete peace of mind.",
+          "price": { "prefix": "Starting at", "amount": "$149", "suffix": "/month" },
+          "features": [
+            "Everything in Family Coverage",
+            "Priority advisor support",
+            "Annual coverage reviews",
+            "Dedicated assistance"
+          ],
+          "cta": { "label": "Get Started", "href": "#" }
+        }
+      ],
+      "advisorCta": {
+        "headline": "Need help choosing the right option?",
+        "description": "Talk to a licensed advisor and get answers tailored to your needs.",
+        "button": { "label": "Talk to an Advisor", "href": "#consultation-cta" }
+      }
+    },
+    "howItWorks": {
+      "enabled": true,
+      "eyebrow": "How It Works",
+      "headline": {
+        "desktop": {
+          "first": "You Bring Your Goals",
+          "second": "We Bring The Guidance"
+        },
+        "mobile": "You Bring Your Goals. We Bring The Guidance."
+      },
+      "description": "Tell us what matters most to you. We'll help you compare options, understand your choices, and find coverage that fits your life and budget.",
+      "groups": [
+        {
+          "id": "customer",
+          "label": "Your Part",
+          "steps": [
+            {
+              "id": "bookConsultation",
+              "number": "01",
+              "title": "Book Consultation",
+              "description": "Schedule a time that works for you."
+            },
+            {
+              "id": "tellUsYourNeeds",
+              "number": "02",
+              "title": "Tell Us Your Needs",
+              "description": "Share your goals, budget, preferred doctors, and coverage priorities."
+            }
+          ]
+        },
+        {
+          "id": "advisor",
+          "label": "Our Part",
+          "steps": [
+            {
+              "id": "comparePlans",
+              "number": "03",
+              "title": "Compare Plans",
+              "description": "Review coverage options side by side from trusted carriers."
+            },
+            {
+              "id": "guideEnrollment",
+              "number": "04",
+              "title": "Guide Enrollment",
+              "description": "We help guide you through enrollment and remain available for ongoing support."
+            }
+          ]
+        }
+      ],
+      "summary": [
+        { "text": "You share your needs and goals." },
+        { "text": "We compare options and explain your choices." },
+        { "text": "Together, we find coverage that fits your life." }
+      ]
+    },
+    "reviews": {
+      "enabled": true,
+      "headline": "Real People. Real Peace of Mind.",
+      "description": "See how DONORDOC has helped individuals and families navigate health coverage with confidence.",
+      "items": [
+        {
+          "id": "review1",
+          "quote": "DONORDOC made comparing plans so easy. I finally understood my options and found the right coverage for my family.",
+          "name": "Sarah M.",
+          "clientType": "Family Coverage Client",
+          "enrollmentText": "Enrolled in 2025",
+          "rating": 5,
+          "image": {
+            "src": "assets/images/testimonial-1.webp",
+            "alt": "Sarah M."
+          }
+        },
+        {
+          "id": "review2",
+          "quote": "The guidance was clear, honest, and never pushy. They answered all my questions and made the process stress-free.",
+          "name": "Michael R.",
+          "clientType": "Individual Coverage Client",
+          "enrollmentText": "Enrolled in 2025",
+          "rating": 5,
+          "image": {
+            "src": "assets/images/testimonial-2.webp",
+            "alt": "Michael R."
+          }
+        },
+        {
+          "id": "review3",
+          "quote": "I had questions about my options and DONORDOC walked me through everything. I felt confident in my decision and the support was excellent.",
+          "name": "Jennifer T.",
+          "clientType": "Family Coverage Client",
+          "enrollmentText": "Enrolled in 2025",
+          "rating": 5,
+          "image": {
+            "src": "assets/images/testimonial-3.webp",
+            "alt": "Jennifer T."
+          }
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "QUESTIONS?",
+      "headline": "Let's Clear Things Up.",
+      "description": "Before you schedule a consultation, here are the answers to the questions we hear most often.",
+      "items": [
+        {
+          "id": "faq1",
+          "question": "Do I have to pay to speak with an advisor?",
+          "answer": "No. Your initial consultation is completely free and comes with no obligation.",
+          "openByDefault": true
+        },
+        {
+          "id": "faq2",
+          "question": "Can you help me compare multiple plans?",
+          "answer": "Yes. We help you review options from trusted carriers so you can make an informed decision.",
+          "openByDefault": false
+        },
+        {
+          "id": "faq3",
+          "question": "Is my information secure?",
+          "answer": "Yes. Your information is handled securely and only used to assist you with coverage options.",
+          "openByDefault": false
+        },
+        {
+          "id": "faq4",
+          "question": "Can you help if I already have coverage?",
+          "answer": "Absolutely. We can review your current coverage and help determine whether a better option may be available.",
+          "openByDefault": false
+        },
+        {
+          "id": "faq5",
+          "question": "How long does the process take?",
+          "answer": "Most consultations take 15-30 minutes depending on your needs.",
+          "openByDefault": false
+        },
+        {
+          "id": "faq6",
+          "question": "What types of coverage can you help with?",
+          "answer": "We can help with individual, family, prescription, hospital, specialist, and related health coverage options.",
+          "openByDefault": false
+        }
+      ],
+      "cta": {
+        "headline": "Still have questions?",
+        "description": "Talk to a licensed advisor.",
+        "button": { "label": "Schedule a Consultation", "href": "#consultation-cta" }
+      }
+    },
+    "consultation": {
+      "enabled": true,
+      "headline": "Ready to Speak With a Licensed Advisor?",
+      "description": "Our licensed advisors are here to help you compare plans, answer your questions, and find coverage that fits your needs and budget.",
+      "benefits": [
+        {
+          "title": "No obligation",
+          "description": "You're in control. There's never any pressure to enroll."
+        },
+        {
+          "title": "Licensed advisors",
+          "description": "Get guidance from experienced professionals you can trust."
+        },
+        {
+          "title": "Secure & confidential",
+          "description": "Your information is always protected and private."
+        },
+        {
+          "title": "Personalized guidance",
+          "description": "Solutions tailored to your unique needs and budget."
+        }
+      ],
+      "image": {
+        "src": "assets/images/advisor-image.webp",
+        "alt": "Licensed advisor speaking with a client"
+      },
+      "form": {
+        "title": "When would you like to speak with us?",
+        "subtitle": "Choose a date and time that works best for you.",
+        "fields": {
+          "preferredDate": { "label": "Preferred Date", "placeholder": "Select date" },
+          "preferredTime": { "label": "Preferred Time", "placeholder": "Select time" },
+          "coverageType": {
+            "label": "Coverage Type You're Interested In",
+            "placeholder": "Select coverage type",
+            "options": [
+              "Health Insurance",
+              "Preventive Care",
+              "Hospital Coverage",
+              "Prescription Coverage",
+              "Emergency Coverage",
+              "Mental Health Coverage",
+              "Specialist Care",
+              "Not Sure Yet"
+            ]
+          },
+          "contactMethod": {
+            "label": "Preferred Contact Method",
+            "placeholder": "Select contact method",
+            "options": ["Phone Call", "Video Call", "Email", "No Preference"]
+          },
+          "firstName": { "label": "First Name", "placeholder": "First name" },
+          "lastName": { "label": "Last Name", "placeholder": "Last name" },
+          "email": { "label": "Email Address", "placeholder": "you@example.com" },
+          "phone": { "label": "Phone Number", "placeholder": "(555) 123-4567" },
+          "notes": { "label": "Additional Notes (Optional)", "placeholder": "How can we help you?" }
+        },
+        "submitLabel": "Schedule Consultation",
+        "secureNote": "Your information is secure and will never be shared."
+      },
+      "scheduling": {
+        "timeStepMinutes": 15,
+        "disabledTimes": [
+          "12:00 AM",
+          "12:15 AM",
+          "12:30 AM",
+          "12:45 AM",
+          "1:00 AM",
+          "1:15 AM",
+          "1:30 AM",
+          "1:45 AM",
+          "2:00 AM",
+          "2:15 AM",
+          "2:30 AM",
+          "2:45 AM",
+          "3:00 AM",
+          "3:15 AM",
+          "3:30 AM",
+          "3:45 AM",
+          "4:00 AM",
+          "4:15 AM",
+          "4:30 AM",
+          "4:45 AM",
+          "5:00 AM",
+          "5:15 AM",
+          "5:30 AM",
+          "5:45 AM",
+          "6:00 AM",
+          "6:15 AM",
+          "6:30 AM",
+          "6:45 AM",
+          "7:00 AM",
+          "7:15 AM",
+          "7:30 AM",
+          "7:45 AM",
+          "8:00 AM",
+          "8:15 AM",
+          "8:30 AM",
+          "8:45 AM"
+        ]
+      }
+    },
+    "finalCta": {
+      "badge": "Let's Get Started",
+      "headline": "Ready to Find Coverage With Confidence?",
+      "description": "Speak with a licensed advisor and get guidance tailored to your needs. It's free and hassle-free.",
+      "image": {
+        "src": "assets/images/final-cta-image.webp",
+        "alt": "Licensed advisor ready to help"
+      },
+      "cta": { "label": "Schedule a Consultation", "href": "#consultation-cta" },
+      "secureNote": "Your information is secure and will never be shared.",
+      "features": [
+        { "text": "Free Consultation" },
+        { "text": "No Obligation" },
+        { "text": "Personalized Guidance" }
+      ]
+    },
+    "footer": {
+      "businessName": "DONORDOC",
+      "description": "Helping individuals and families find the right health coverage with confidence and ease.",
+      "socialLinks": [
+        { "id": "facebook", "label": "Facebook", "href": "#" },
+        { "id": "instagram", "label": "Instagram", "href": "#" },
+        { "id": "linkedin", "label": "LinkedIn", "href": "#" },
+        { "id": "youtube", "label": "YouTube", "href": "#" }
+      ],
+      "linkGroups": [
+        {
+          "id": "company",
+          "title": "Company",
+          "links": [
+            { "label": "About Us", "href": "#about-cta" },
+            { "label": "How It Works", "href": "#how-it-works-cta" },
+            { "label": "Our Advisors", "href": "#consultation-cta" },
+            { "label": "FAQ", "href": "#faq-cta" },
+            { "label": "Contact Us", "href": "#contact-cta" }
+          ]
+        },
+        {
+          "id": "coverage",
+          "title": "Coverage",
+          "links": [
+            { "label": "Individual & Family", "href": "#" },
+            { "label": "Medicare Options", "href": "#" },
+            { "label": "Supplemental Plans", "href": "#" },
+            { "label": "Prescription Plans", "href": "#" },
+            { "label": "Short-Term Plans", "href": "#" }
+          ]
+        },
+        {
+          "id": "resources",
+          "title": "Resources",
+          "links": [
+            { "label": "Health Insurance Basics", "href": "#" },
+            { "label": "Glossary", "href": "#" },
+            { "label": "FAQ", "href": "#faq-cta" },
+            { "label": "Helpful Guides", "href": "#" },
+            { "label": "Support Center", "href": "#" }
+          ]
+        }
+      ],
+      "contact": {
+        "phone": { "display": "(786) 616-3592", "href": "tel:+17866163592" },
+        "email": "support@donordoc.com",
+        "address": "100 SE 2nd St, Suite 2000, Miami, FL 33131",
+        "hours": "Mon - Fri: 9:00 AM - 6:00 PM EST"
+      },
+      "secureNote": "Your information is secure and will never be shared.",
+      "copyrightText": "DONORDOC. All rights reserved.",
+      "legalLinks": [
+        { "label": "Privacy Policy", "href": "#" },
+        { "label": "Terms of Service", "href": "#" },
+        { "label": "Site Map", "href": "#" }
+      ]
+    }
+  },
+  "extensions": {
+    "installed": []
+  }
+}

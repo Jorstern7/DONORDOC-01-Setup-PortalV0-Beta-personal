@@ -1,0 +1,64 @@
+/*
+Website System Name: DONORDOC-01 V1
+Author: FRONTLENS LLC
+License: For personal/business use only. Redistribution, resale, or sublicensing is strictly Copyright (c) 2026 FRONTLENS LLC. All rights reserved.
+*/
+
+export const themeRegistry = {
+  trustGreen: {
+    brand: "#37b24d",
+    brandHover: "#2e9a43",
+    accent: "#1ea99d",
+    accentHover: "#178f86",
+    brandSoft: "#ebf7ed",
+    brandMuted: "#d7f0db",
+    brandLine: "#c3e6cb",
+    brandTint: "#dfe9d8",
+    brandFaint: "#f2f7f3",
+    manifestThemeColor: "#2EAF50",
+    manifestBackgroundColor: "#2EAF50",
+    heroImage: "assets/images/hero-image.webp",
+  },
+  professionalBlue: {
+    brand: "#1267E8",
+    brandHover: "#0E55C4",
+    accent: "#2F5BEA",
+    accentHover: "#2449C7",
+    brandSoft: "#EAF2FF",
+    brandMuted: "#D7E6FF",
+    brandLine: "#BDD4FA",
+    brandTint: "#DDE8F8",
+    brandFaint: "#F3F7FD",
+    manifestThemeColor: "#1267E8",
+    manifestBackgroundColor: "#FFFFFF",
+    heroImage: "assets/images/hero-professional-blue.webp",
+  },
+  executiveNavy: {
+    brand: "#102E73",
+    brandHover: "#0B245D",
+    accent: "#355DE8",
+    accentHover: "#294BC4",
+    brandSoft: "#EDF2FC",
+    brandMuted: "#DCE5F7",
+    brandLine: "#C6D3ED",
+    brandTint: "#DFE6F2",
+    brandFaint: "#F4F6FA",
+    manifestThemeColor: "#102E73",
+    manifestBackgroundColor: "#FFFFFF",
+    heroImage: "assets/images/hero-executive-navy.webp",
+  },
+  healthcareTeal: {
+    brand: "#0F8B8D",
+    brandHover: "#0B7476",
+    accent: "#16A3A5",
+    accentHover: "#118789",
+    brandSoft: "#E8F6F5",
+    brandMuted: "#D3EEEC",
+    brandLine: "#B9E1DE",
+    brandTint: "#DCECE8",
+    brandFaint: "#F2F8F7",
+    manifestThemeColor: "#0F8B8D",
+    manifestBackgroundColor: "#FFFFFF",
+    heroImage: "assets/images/hero-healthcare-teal.webp",
+  },
+};

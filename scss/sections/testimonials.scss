@@ -74,7 +74,7 @@ main {
     }
 
     .testimonials__bg-wave__back {
-      fill: rgba($color-brand-tint, 0.62);
+      fill: color-mix(in srgb, $color-brand-tint 62%, transparent);
       opacity: 0.45;
     }
 

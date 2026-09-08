@@ -16,16 +16,28 @@ $fs-section-heading-sm: 24px;
 $fs-section-desc: 18px;
 $fs-section-desc-md: 16px;
 
-// Brand and interface colors
-$color-brand: #37b24d;
-$color-brand-hover: #2e9a43;
-$color-accent: #1ea99d;
-$color-accent-hover: #178f86;
-$color-brand-soft: #ebf7ed;
-$color-brand-muted: #d7f0db;
-$color-brand-line: #c3e6cb;
-$color-brand-tint: #dfe9d8;
-$color-brand-faint: #f2f7f3;
+// Brand tokens. Hex fallbacks are Trust Green, the default theme.
+:root {
+  --color-brand: #37b24d;
+  --color-brand-hover: #2e9a43;
+  --color-accent: #1ea99d;
+  --color-accent-hover: #178f86;
+  --color-brand-soft: #ebf7ed;
+  --color-brand-muted: #d7f0db;
+  --color-brand-line: #c3e6cb;
+  --color-brand-tint: #dfe9d8;
+  --color-brand-faint: #f2f7f3;
+}
+
+$color-brand: var(--color-brand);
+$color-brand-hover: var(--color-brand-hover);
+$color-accent: var(--color-accent);
+$color-accent-hover: var(--color-accent-hover);
+$color-brand-soft: var(--color-brand-soft);
+$color-brand-muted: var(--color-brand-muted);
+$color-brand-line: var(--color-brand-line);
+$color-brand-tint: var(--color-brand-tint);
+$color-brand-faint: var(--color-brand-faint);
 $color-ink: #1a1a1a;
 $color-ink-soft: #333333;
 $color-text: #555555;

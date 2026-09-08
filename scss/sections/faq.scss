@@ -104,9 +104,9 @@ main {
       width: 56px;
       height: 56px;
       border-radius: 50%;
-      background: rgba($color-brand-muted, 0.5);
+      background: color-mix(in srgb, $color-brand-muted 50%, transparent);
       color: $color-brand;
-      box-shadow: 0 2px 8px rgba($color-brand, 0.12);
+      box-shadow: 0 2px 8px color-mix(in srgb, $color-brand 12%, transparent);
 
       svg {
         display: block;
@@ -414,7 +414,7 @@ main {
 
     @media (hover: hover) and (min-width: 992px) {
       .faq-item:not(.is-open):hover {
-        background: rgba($color-brand-soft, 0.45);
+        background: color-mix(in srgb, $color-brand-soft 45%, transparent);
       }
     }
 
