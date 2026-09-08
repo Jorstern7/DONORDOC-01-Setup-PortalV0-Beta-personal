@@ -16,7 +16,7 @@ function closeAllDropdowns(allDropdowns, exceptThis = null) {
 
 export function initConsultationSection() {
   try {
-    const section = document.getElementById("consultation-cta");
+    const section = document.querySelector('[data-section="consultation"]');
     if (!section) return;
 
     const scheduling = getSiteConfig()?.sections?.consultation?.scheduling || {};

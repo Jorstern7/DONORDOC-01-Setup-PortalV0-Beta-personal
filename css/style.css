@@ -3346,7 +3346,7 @@ main .consultation .consultation__grid {
   align-items: start;
 }
 main .consultation .consultation__heading {
-  margin: 0 0 20px;
+  margin: 0 0 16px;
   font-size: 42px;
 }
 @media (max-width: 1023.98px) {
@@ -3372,7 +3372,12 @@ main .consultation .consultation__br-mobile {
   display: none;
 }
 main .consultation .consultation__heading-line {
-  display: none;
+  display: block;
+  width: 48px;
+  height: 4px;
+  background: var(--color-brand);
+  border-radius: 2px;
+  margin: 0 0 20px;
 }
 main .consultation .consultation__description {
   margin: 0 0 32px;
@@ -3770,11 +3775,6 @@ main .consultation .consultation__secure-icon svg {
     display: inline;
   }
   main .consultation .consultation__heading-line {
-    display: block;
-    width: 48px;
-    height: 4px;
-    background: var(--color-brand);
-    border-radius: 2px;
     margin-bottom: 16px;
   }
   main .consultation .consultation__description {

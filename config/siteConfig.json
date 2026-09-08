@@ -28,15 +28,15 @@
   },
   "navigation": {
     "items": [
-      { "id": "home", "label": "Home", "href": "#health-cta" },
-      { "id": "about", "label": "About", "href": "#about-cta" },
-      { "id": "coverage", "label": "Coverage Options", "href": "#services-cta" },
-      { "id": "howItWorks", "label": "How It Works", "href": "#how-it-works-cta" },
-      { "id": "reviews", "label": "Reviews", "href": "#testimonials-cta" },
-      { "id": "faq", "label": "FAQ", "href": "#faq-cta" }
+      { "id": "home", "label": "Home", "href": "#hero" },
+      { "id": "about", "label": "About", "href": "#about" },
+      { "id": "coverage", "label": "Coverage Options", "href": "#services" },
+      { "id": "howItWorks", "label": "How It Works", "href": "#howItWorks" },
+      { "id": "reviews", "label": "Reviews", "href": "#reviews" },
+      { "id": "faq", "label": "FAQ", "href": "#faq" }
     ],
-    "primaryAction": { "label": "Compare Plans", "href": "#pricing-cta" },
-    "secondaryAction": { "label": "Talk to an Advisor", "href": "#consultation-cta" }
+    "primaryAction": { "label": "Compare Plans", "href": "#pricing" },
+    "secondaryAction": { "label": "Talk to an Advisor", "href": "#consultation" }
   },
   "sections": {
     "hero": {
@@ -52,8 +52,8 @@
         { "text": "Multiple trusted carriers" },
         { "text": "Ongoing support after enrollment" }
       ],
-      "primaryCta": { "label": "Compare Plans", "href": "#pricing-cta" },
-      "secondaryCta": { "label": "Talk to an Advisor", "href": "#consultation-cta" },
+      "primaryCta": { "label": "Compare Plans", "href": "#pricing" },
+      "secondaryCta": { "label": "Talk to an Advisor", "href": "#consultation" },
       "trustLine": "Secure. Private. No obligation.",
       "image": {
         "mode": "theme",
@@ -140,7 +140,7 @@
           "description": "Access to specialized care and treatment options."
         }
       ],
-      "cta": { "label": "Explore Coverage Options", "href": "#pricing-cta" }
+      "cta": { "label": "Explore Coverage Options", "href": "#pricing" }
     },
     "pricing": {
       "enabled": true,
@@ -197,7 +197,7 @@
       "advisorCta": {
         "headline": "Need help choosing the right option?",
         "description": "Talk to a licensed advisor and get answers tailored to your needs.",
-        "button": { "label": "Talk to an Advisor", "href": "#consultation-cta" }
+        "button": { "label": "Talk to an Advisor", "href": "#consultation" }
       }
     },
     "howItWorks": {
@@ -353,7 +353,7 @@
       "cta": {
         "headline": "Still have questions?",
         "description": "Talk to a licensed advisor.",
-        "button": { "label": "Schedule a Consultation", "href": "#consultation-cta" }
+        "button": { "label": "Schedule a Consultation", "href": "#consultation" }
       }
     },
     "consultation": {
@@ -472,7 +472,7 @@
         "src": "assets/images/final-cta-image.webp",
         "alt": "Licensed advisor ready to help"
       },
-      "cta": { "label": "Schedule a Consultation", "href": "#consultation-cta" },
+      "cta": { "label": "Schedule a Consultation", "href": "#consultation" },
       "secureNote": "Your information is secure and will never be shared.",
       "features": [
         { "text": "Free Consultation" },
@@ -494,11 +494,11 @@
           "id": "company",
           "title": "Company",
           "links": [
-            { "label": "About Us", "href": "#about-cta" },
-            { "label": "How It Works", "href": "#how-it-works-cta" },
-            { "label": "Our Advisors", "href": "#consultation-cta" },
-            { "label": "FAQ", "href": "#faq-cta" },
-            { "label": "Contact Us", "href": "#contact-cta" }
+            { "label": "About Us", "href": "#about" },
+            { "label": "How It Works", "href": "#howItWorks" },
+            { "label": "Our Advisors", "href": "#consultation" },
+            { "label": "FAQ", "href": "#faq" },
+            { "label": "Contact Us", "href": "#footer" }
           ]
         },
         {
@@ -518,7 +518,7 @@
           "links": [
             { "label": "Health Insurance Basics", "href": "#" },
             { "label": "Glossary", "href": "#" },
-            { "label": "FAQ", "href": "#faq-cta" },
+            { "label": "FAQ", "href": "#faq" },
             { "label": "Helpful Guides", "href": "#" },
             { "label": "Support Center", "href": "#" }
           ]

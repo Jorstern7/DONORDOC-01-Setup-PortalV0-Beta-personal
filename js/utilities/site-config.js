@@ -174,8 +174,9 @@ function applyBranding(config) {
 
   const favicon = config.branding?.favicon?.src;
   if (favicon) {
-    const icon = document.querySelector('link[rel="icon"][sizes="any"]');
-    if (icon) icon.setAttribute("href", favicon);
+    document.querySelectorAll('link[rel="icon"]').forEach(function (icon) {
+      icon.setAttribute("href", favicon);
+    });
   }
 }
 
@@ -237,7 +238,7 @@ function applySectionLists(config) {
 
   applyIndexed(
     document.querySelector('[data-section="trust"]'),
-    ".trust__stat",
+    '[data-config-item="trust"]',
     sections.trust?.stats,
     function (el, item) {
       const value = el.querySelector(".trust__stat-value");
@@ -249,7 +250,7 @@ function applySectionLists(config) {
 
   applyIndexed(
     document.querySelector('[data-section="trust"]'),
-    ".trust__benefit",
+    '[data-config-item="trustBenefits"]',
     sections.trust?.benefits,
     function (el, item) {
       const title = el.querySelector(".trust__benefit-title");
@@ -261,7 +262,7 @@ function applySectionLists(config) {
 
   applyIndexed(
     document.querySelector('[data-section="hero"]'),
-    ".hero__benefits li",
+    '[data-config-item="hero"]',
     sections.hero?.benefits,
     function (el, item) {
       const nodes = Array.from(el.childNodes).filter(function (node) {
@@ -273,7 +274,7 @@ function applySectionLists(config) {
 
   applyIndexed(
     document.querySelector('[data-section="services"]'),
-    ".service-card",
+    '[data-config-item="services"]',
     sections.services?.items,
     function (el, item) {
       const title = el.querySelector(".service-card__title");
@@ -289,7 +290,7 @@ function applySectionLists(config) {
 
   applyIndexed(
     document.querySelector('[data-section="pricing"]'),
-    ".pricing-card",
+    '[data-config-item="pricing"]',
     sections.pricing?.plans,
     function (el, item) {
       const name = el.querySelector(".pricing-card__title");
@@ -309,7 +310,7 @@ function applySectionLists(config) {
         if (item.cta?.href) cta.setAttribute("href", item.cta.href);
         setTextPreserveChildren(cta, item.cta?.label);
       }
-      applyIndexed(el, ".pricing-card__features li", item.features, function (li, feature) {
+      applyIndexed(el, '[data-config-item="pricingFeatures"]', item.features, function (li, feature) {
         const texts = Array.from(li.childNodes).filter(function (node) {
           return node.nodeType === Node.TEXT_NODE && node.textContent.trim();
         });
@@ -321,10 +322,8 @@ function applySectionLists(config) {
   const how = document.querySelector('[data-section="howItWorks"]');
   if (how && sections.howItWorks) {
     const groups = sections.howItWorks.groups || [];
-    const labels = how.querySelectorAll(".how-it-works__part-header-label");
-    groups.forEach(function (group, index) {
-      if (!labels[index]) return;
-      const text = Array.from(labels[index].childNodes).filter(function (node) {
+    applyIndexed(how, '[data-config-item="howItWorksGroup"]', groups, function (el, group) {
+      const text = Array.from(el.childNodes).filter(function (node) {
         return node.nodeType === Node.TEXT_NODE && node.textContent.trim();
       });
       if (text[0]) text[0].textContent = " " + group.label;
@@ -333,7 +332,7 @@ function applySectionLists(config) {
     const steps = groups.reduce(function (all, group) {
       return all.concat(group.steps || []);
     }, []);
-    applyIndexed(how, ".how-it-works__card", steps, function (el, step) {
+    applyIndexed(how, '[data-config-item="howItWorks"]', steps, function (el, step) {
       const number = el.querySelector(".how-it-works__card-number");
       const title = el.querySelector(".how-it-works__card-title");
       const desc = el.querySelector(".how-it-works__card-desc");
@@ -341,12 +340,12 @@ function applySectionLists(config) {
       if (title) title.textContent = step.title;
       if (desc) desc.textContent = step.description;
     });
-    applyIndexed(how, ".how-it-works__step-marker", steps, function (el, step) {
+    applyIndexed(how, '[data-config-item="howItWorksMarkers"]', steps, function (el, step) {
       el.textContent = step.number;
     });
   }
 
-  const advisor = document.querySelector(".pricing-advisor-cta");
+  const advisor = document.querySelector('[data-config-item="advisorCta"]');
   if (advisor && sections.pricing?.advisorCta) {
     const title = advisor.querySelector(".pricing-advisor-cta__title");
     const desc = advisor.querySelector(".pricing-advisor-cta__desc");
@@ -363,7 +362,7 @@ function applySectionLists(config) {
 
   applyIndexed(
     document.querySelector('[data-section="reviews"]'),
-    ".testimonial-card",
+    '[data-config-item="reviews"]',
     sections.reviews?.items,
     function (el, item) {
       const quote = el.querySelector(".testimonial-card__text");
@@ -392,7 +391,7 @@ function applySectionLists(config) {
 
   applyIndexed(
     document.querySelector('[data-section="consultation"]'),
-    ".consultation__benefit",
+    '[data-config-item="consultation"]',
     sections.consultation?.benefits,
     function (el, item) {
       const title = el.querySelector("strong");
@@ -404,7 +403,7 @@ function applySectionLists(config) {
 
   applyIndexed(
     document.querySelector('[data-section="finalCta"]'),
-    ".final-cta__feature-label",
+    '[data-config-item="finalCta"]',
     sections.finalCta?.features,
     function (el, item) {
       el.textContent = item.text;
@@ -413,21 +412,21 @@ function applySectionLists(config) {
 
   const footer = document.querySelector('[data-section="footer"]');
   if (footer && sections.footer) {
-    applyIndexed(footer, ".footer__social a", sections.footer.socialLinks, function (el, item) {
+    applyIndexed(footer, '[data-config-item="footerSocial"]', sections.footer.socialLinks, function (el, item) {
       el.setAttribute("href", item.href);
       el.setAttribute("aria-label", item.label);
     });
-    applyIndexed(footer, ".footer__nav-group", sections.footer.linkGroups, function (el, group) {
+    applyIndexed(footer, "[data-footer-nav-group]", sections.footer.linkGroups, function (el, group) {
       const heading = el.querySelector(".footer__nav-heading");
       const trigger = el.querySelector(".footer__nav-trigger-label");
       if (heading) heading.textContent = group.title;
       if (trigger) trigger.textContent = group.title;
-      applyIndexed(el, ".footer__nav-list a", group.links, function (link, item) {
+      applyIndexed(el, "[data-footer-nav-panel] a", group.links, function (link, item) {
         link.setAttribute("href", item.href);
         link.textContent = item.label;
       });
     });
-    applyIndexed(footer, ".site-footer__bar-links a", sections.footer.legalLinks, function (el, item) {
+    applyIndexed(footer, '[data-config-item="footerLegal"]', sections.footer.legalLinks, function (el, item) {
       el.setAttribute("href", item.href);
       el.textContent = item.label;
     });
@@ -488,12 +487,12 @@ function applySiteConfig(config) {
   applyNavigation(config);
   applyDataConfig(config);
   applyHero(config);
-  applyImage(".about__image", config.sections?.about?.image);
+  applyImage('[data-section="about"] img', config.sections?.about?.image);
   applyImage(
-    ".consultation__visual-img",
+    '[data-section="consultation"] img',
     config.sections?.consultation?.image,
   );
-  applyImage(".final-cta__visual img", config.sections?.finalCta?.image);
+  applyImage('[data-section="finalCta"] img', config.sections?.finalCta?.image);
   applySectionLists(config);
   applyConsultationOptions(config);
   applySectionVisibility(config);

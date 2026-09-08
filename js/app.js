@@ -33,8 +33,4 @@ document.addEventListener("DOMContentLoaded", function () {
     initFaqAccordion();
     initFooterAccordion();
   });
-
-  window.addEventListener("load", () => {
-    if (location.hash == "#health-cta") window.scrollTo(0, 0);
-  });
 });

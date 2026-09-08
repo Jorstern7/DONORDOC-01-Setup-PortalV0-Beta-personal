@@ -52,10 +52,6 @@
     <!-- Standard favicon -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
 
-    <!-- PNG icons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-
     <!-- Apple touch icon -->
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
@@ -68,7 +64,7 @@
       <div class="container">
         <nav class="navbar navbar-expand-ipad-pro navbar-light">
           <div class="p-0 container-fluid navbar-inner">
-            <a href="#health-cta" class="navbar-brand"
+            <a href="#hero" class="navbar-brand"
               ><img
                 loading="lazy"
                 src="assets/images/donordoc-new-logo.webp"
@@ -76,7 +72,7 @@
                 class="logo-img"
                 data-branding-logo
             /></a>
-            ><button
+            <button
               class="navbar-toggler d-ipad-pro-none"
               type="button"
               data-nav-toggle
@@ -93,51 +89,40 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav navbar-nav-main">
                 <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    href="#health-cta"
-                    data-nav-item="home"
+                  <a class="nav-link active" href="#hero" data-nav-item="home"
                     >Home</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#about-cta" data-nav-item="about"
+                  <a class="nav-link" href="#about" data-nav-item="about"
                     >About</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="#services-cta"
-                    data-nav-item="coverage"
+                  <a class="nav-link" href="#services" data-nav-item="coverage"
                     >Coverage Options</a
                   >
                 </li>
                 <li class="nav-item">
                   <a
                     class="nav-link"
-                    href="#how-it-works-cta"
+                    href="#howItWorks"
                     data-nav-item="howItWorks"
                     >How It Works</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="#testimonials-cta"
-                    data-nav-item="reviews"
+                  <a class="nav-link" href="#reviews" data-nav-item="reviews"
                     >Reviews</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#faq-cta" data-nav-item="faq"
-                    >FAQ</a
-                  >
+                  <a class="nav-link" href="#faq" data-nav-item="faq">FAQ</a>
                 </li>
                 <li class="nav-item nav-item-advisor">
                   <a
                     class="nav-link nav-link-advisor"
-                    href="#consultation-cta"
+                    href="#consultation"
                     data-nav-secondary
                   >
                     <svg
@@ -165,7 +150,7 @@
                 <li class="nav-item">
                   <a
                     class="button button--primary button--nav navbar-btn"
-                    href="#pricing-cta"
+                    href="#pricing"
                     data-nav-primary
                   >
                     Compare Plans
@@ -197,7 +182,7 @@
               aria-label="Navigation menu"
             >
               <div class="offcanvas-header">
-                <a href="#health-cta" class="logo-link">
+                <a href="#hero" class="logo-link">
                   <img
                     loading="lazy"
                     src="assets/images/donordoc-new-logo.webp"
@@ -212,7 +197,7 @@
                   <li>
                     <a
                       class="mobile-nav__link active"
-                      href="#health-cta"
+                      href="#hero"
                       data-nav-item="home"
                     >
                       <span class="mobile-nav__icon"
@@ -267,7 +252,7 @@
                   <li>
                     <a
                       class="mobile-nav__link"
-                      href="#about-cta"
+                      href="#about"
                       data-nav-item="about"
                     >
                       <span class="mobile-nav__icon"
@@ -319,7 +304,7 @@
                   <li>
                     <a
                       class="mobile-nav__link"
-                      href="#services-cta"
+                      href="#services"
                       data-nav-item="coverage"
                     >
                       <span class="mobile-nav__icon"
@@ -370,7 +355,7 @@
                   <li>
                     <a
                       class="mobile-nav__link"
-                      href="#how-it-works-cta"
+                      href="#howItWorks"
                       data-nav-item="howItWorks"
                     >
                       <span class="mobile-nav__icon"
@@ -422,7 +407,7 @@
                   <li>
                     <a
                       class="mobile-nav__link"
-                      href="#testimonials-cta"
+                      href="#reviews"
                       data-nav-item="reviews"
                     >
                       <span class="mobile-nav__icon"
@@ -473,11 +458,7 @@
                     </a>
                   </li>
                   <li>
-                    <a
-                      class="mobile-nav__link"
-                      href="#faq-cta"
-                      data-nav-item="faq"
-                    >
+                    <a class="mobile-nav__link" href="#faq" data-nav-item="faq">
                       <span class="mobile-nav__icon"
                         ><svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -531,7 +512,7 @@
                 <div class="mobile-nav__divider"></div>
                 <a
                   class="mobile-nav__advisor"
-                  href="#consultation-cta"
+                  href="#consultation"
                   data-nav-secondary
                 >
                   <svg
@@ -555,7 +536,7 @@
                 </a>
                 <a
                   class="button button--primary button--mobile"
-                  href="#pricing-cta"
+                  href="#pricing"
                   data-nav-primary
                 >
                   <span class="button__label">
@@ -612,7 +593,6 @@
       <section
         class="hero"
         data-section="hero"
-        id="health-cta"
         aria-labelledby="health-heading"
       >
         <div class="container">
@@ -661,7 +641,7 @@
               </p>
 
               <ul class="hero__benefits">
-                <li>
+                <li data-config-item="hero">
                   <span class="hero__benefit-icon" aria-hidden="true">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -680,7 +660,7 @@
                   </span>
                   Personalized plan guidance
                 </li>
-                <li>
+                <li data-config-item="hero">
                   <span class="hero__benefit-icon" aria-hidden="true">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -699,7 +679,7 @@
                   </span>
                   Multiple trusted carriers
                 </li>
-                <li>
+                <li data-config-item="hero">
                   <span class="hero__benefit-icon" aria-hidden="true">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -726,7 +706,7 @@
                 aria-label="Call to actions"
               >
                 <a
-                  href="#pricing-cta"
+                  href="#pricing"
                   class="button button--primary"
                   data-config="sections.hero.primaryCta.href"
                   data-config-attr="href"
@@ -752,7 +732,7 @@
                   </svg>
                 </a>
                 <a
-                  href="#consultation-cta"
+                  href="#consultation"
                   class="button button--outline hero__button"
                   data-config="sections.hero.secondaryCta.href"
                   data-config-attr="href"
@@ -859,15 +839,10 @@
       <div data-extension-slot="after-hero"></div>
 
       <!-- FRONTLENS:SECTION:TRUST:START -->
-      <section
-        class="trust"
-        data-section="trust"
-        id="featured"
-        aria-label="Trust and proof"
-      >
+      <section class="trust" data-section="trust" aria-label="Trust and proof">
         <div class="container">
           <div class="trust__stats-card">
-            <div class="trust__stat">
+            <div class="trust__stat" data-config-item="trust">
               <div class="trust__stat-icon" aria-hidden="true">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -889,7 +864,7 @@
               <p class="trust__stat-value">50,000+</p>
               <p class="trust__stat-label">Families Served</p>
             </div>
-            <div class="trust__stat">
+            <div class="trust__stat" data-config-item="trust">
               <div class="trust__stat-icon" aria-hidden="true">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -912,7 +887,7 @@
               <p class="trust__stat-value">25+</p>
               <p class="trust__stat-label">Top Insurance Carriers</p>
             </div>
-            <div class="trust__stat">
+            <div class="trust__stat" data-config-item="trust">
               <div class="trust__stat-icon" aria-hidden="true">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -932,7 +907,7 @@
               <p class="trust__stat-value">U.S. Based</p>
               <p class="trust__stat-label">Support Team</p>
             </div>
-            <div class="trust__stat">
+            <div class="trust__stat" data-config-item="trust">
               <div class="trust__stat-icon" aria-hidden="true">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -957,7 +932,7 @@
           </div>
 
           <div class="trust__benefits">
-            <div class="trust__benefit">
+            <div class="trust__benefit" data-config-item="trustBenefits">
               <span class="trust__benefit-icon" aria-hidden="true">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -981,7 +956,7 @@
                 </p>
               </div>
             </div>
-            <div class="trust__benefit">
+            <div class="trust__benefit" data-config-item="trustBenefits">
               <span class="trust__benefit-icon" aria-hidden="true">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1005,7 +980,7 @@
                 </p>
               </div>
             </div>
-            <div class="trust__benefit">
+            <div class="trust__benefit" data-config-item="trustBenefits">
               <span class="trust__benefit-icon" aria-hidden="true">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1039,7 +1014,6 @@
       <section
         class="about"
         data-section="about"
-        id="about-cta"
         aria-labelledby="about-heading"
       >
         <div class="container">
@@ -1086,7 +1060,6 @@
       <section
         class="services"
         data-section="services"
-        id="services-cta"
         aria-labelledby="services-heading"
       >
         <div class="container">
@@ -1100,10 +1073,7 @@
             <h1 id="services-heading">
               <span data-config="sections.services.headline.main"
                 >Helping You Find Coverage</span
-              ><br
-                class="services__break-mobile"
-                aria-hidden="true"
-              />
+              ><br class="services__break-mobile" aria-hidden="true" />
               <span data-config="sections.services.headline.mid">That</span>
               <span
                 class="services__heading-accent"
@@ -1123,7 +1093,11 @@
           </header>
 
           <div class="services__grid">
-            <article class="service-card" data-reveal>
+            <article
+              class="service-card"
+              data-config-item="services"
+              data-reveal
+            >
               <div class="service-card__icon" aria-hidden="true">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1161,7 +1135,11 @@
               </div>
             </article>
 
-            <article class="service-card" data-reveal>
+            <article
+              class="service-card"
+              data-config-item="services"
+              data-reveal
+            >
               <div class="service-card__icon" aria-hidden="true">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1193,7 +1171,11 @@
               </div>
             </article>
 
-            <article class="service-card" data-reveal>
+            <article
+              class="service-card"
+              data-config-item="services"
+              data-reveal
+            >
               <div class="service-card__icon" aria-hidden="true">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1221,7 +1203,11 @@
               </div>
             </article>
 
-            <article class="service-card" data-reveal>
+            <article
+              class="service-card"
+              data-config-item="services"
+              data-reveal
+            >
               <div class="service-card__icon" aria-hidden="true">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1255,7 +1241,11 @@
               </div>
             </article>
 
-            <article class="service-card" data-reveal>
+            <article
+              class="service-card"
+              data-config-item="services"
+              data-reveal
+            >
               <div class="service-card__icon" aria-hidden="true">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1289,7 +1279,11 @@
               </div>
             </article>
 
-            <article class="service-card" data-reveal>
+            <article
+              class="service-card"
+              data-config-item="services"
+              data-reveal
+            >
               <div
                 class="service-card__icon service-card__icon--lg"
                 aria-hidden="true"
@@ -1327,7 +1321,7 @@
 
           <div class="services__cta">
             <a
-              href="#pricing-cta"
+              href="#pricing"
               class="button button--outline services__cta-btn"
               data-config="sections.services.cta.href"
               data-config-attr="href"
@@ -1362,7 +1356,6 @@
       <section
         class="pricing"
         data-section="pricing"
-        id="pricing-cta"
         aria-labelledby="solution-heading"
       >
         <div class="pricing__bg" aria-hidden="true">
@@ -1428,7 +1421,7 @@
             <div class="swiper pricing__swiper" data-swiper="pricing">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <article class="pricing-card">
+                  <article class="pricing-card" data-config-item="pricing">
                     <div class="pricing-card__icon" aria-hidden="true">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -1452,7 +1445,7 @@
                       coverage.
                     </p>
                     <ul class="pricing-card__features">
-                      <li>
+                      <li data-config-item="pricingFeatures">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="18"
@@ -1470,7 +1463,7 @@
                         </svg>
                         Compare top health plans
                       </li>
-                      <li>
+                      <li data-config-item="pricingFeatures">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="18"
@@ -1488,7 +1481,7 @@
                         </svg>
                         Licensed advisor guidance
                       </li>
-                      <li>
+                      <li data-config-item="pricingFeatures">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="18"
@@ -1506,7 +1499,7 @@
                         </svg>
                         Enrollment support
                       </li>
-                      <li>
+                      <li data-config-item="pricingFeatures">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="18"
@@ -1563,7 +1556,10 @@
                 </div>
 
                 <div class="swiper-slide">
-                  <article class="pricing-card pricing-card--featured">
+                  <article
+                    class="pricing-card pricing-card--featured"
+                    data-config-item="pricing"
+                  >
                     <span class="pricing-card__badge">Most Popular</span>
                     <div class="pricing-card__icon" aria-hidden="true">
                       <svg
@@ -1589,7 +1585,7 @@
                       ones.
                     </p>
                     <ul class="pricing-card__features">
-                      <li>
+                      <li data-config-item="pricingFeatures">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="18"
@@ -1607,7 +1603,7 @@
                         </svg>
                         Family plan comparisons
                       </li>
-                      <li>
+                      <li data-config-item="pricingFeatures">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="18"
@@ -1625,7 +1621,7 @@
                         </svg>
                         Dependent coverage review
                       </li>
-                      <li>
+                      <li data-config-item="pricingFeatures">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="18"
@@ -1643,7 +1639,7 @@
                         </svg>
                         Enrollment assistance
                       </li>
-                      <li>
+                      <li data-config-item="pricingFeatures">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="18"
@@ -1700,7 +1696,7 @@
                 </div>
 
                 <div class="swiper-slide">
-                  <article class="pricing-card">
+                  <article class="pricing-card" data-config-item="pricing">
                     <div class="pricing-card__icon" aria-hidden="true">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -1725,7 +1721,7 @@
                       of mind.
                     </p>
                     <ul class="pricing-card__features">
-                      <li>
+                      <li data-config-item="pricingFeatures">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="18"
@@ -1743,7 +1739,7 @@
                         </svg>
                         Everything in Family Coverage
                       </li>
-                      <li>
+                      <li data-config-item="pricingFeatures">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="18"
@@ -1761,7 +1757,7 @@
                         </svg>
                         Priority advisor support
                       </li>
-                      <li>
+                      <li data-config-item="pricingFeatures">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="18"
@@ -1779,7 +1775,7 @@
                         </svg>
                         Annual coverage reviews
                       </li>
-                      <li>
+                      <li data-config-item="pricingFeatures">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="18"
@@ -1893,7 +1889,7 @@
             </div>
           </div>
 
-          <aside class="pricing-advisor-cta">
+          <aside class="pricing-advisor-cta" data-config-item="advisorCta">
             <div class="pricing-advisor-cta__icon" aria-hidden="true">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -1917,7 +1913,7 @@
                 needs.
               </p>
             </div>
-            <a href="#consultation-cta" class="button pricing-advisor-cta__btn">
+            <a href="#consultation" class="button pricing-advisor-cta__btn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
@@ -1947,7 +1943,6 @@
       <section
         class="how-it-works"
         data-section="howItWorks"
-        id="how-it-works-cta"
         aria-labelledby="how-it-works-heading"
       >
         <div class="container">
@@ -2030,7 +2025,10 @@
                   class="how-it-works__part-header-line"
                   aria-hidden="true"
                 ></span>
-                <span class="how-it-works__part-header-label">
+                <span
+                  class="how-it-works__part-header-label"
+                  data-config-item="howItWorksGroup"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -2053,10 +2051,16 @@
               </div>
 
               <div class="how-it-works__step">
-                <span class="how-it-works__step-marker" aria-hidden="true"
+                <span
+                  class="how-it-works__step-marker"
+                  data-config-item="howItWorksMarkers"
+                  aria-hidden="true"
                   >01</span
                 >
-                <article class="how-it-works__card">
+                <article
+                  class="how-it-works__card"
+                  data-config-item="howItWorks"
+                >
                   <div class="how-it-works__card-icon" aria-hidden="true">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -2107,10 +2111,16 @@
               </div>
 
               <div class="how-it-works__step">
-                <span class="how-it-works__step-marker" aria-hidden="true"
+                <span
+                  class="how-it-works__step-marker"
+                  data-config-item="howItWorksMarkers"
+                  aria-hidden="true"
                   >02</span
                 >
-                <article class="how-it-works__card">
+                <article
+                  class="how-it-works__card"
+                  data-config-item="howItWorks"
+                >
                   <div class="how-it-works__card-icon" aria-hidden="true">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -2153,7 +2163,10 @@
                   class="how-it-works__part-header-line"
                   aria-hidden="true"
                 ></span>
-                <span class="how-it-works__part-header-label">
+                <span
+                  class="how-it-works__part-header-label"
+                  data-config-item="howItWorksGroup"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -2184,10 +2197,16 @@
               </div>
 
               <div class="how-it-works__step">
-                <span class="how-it-works__step-marker" aria-hidden="true"
+                <span
+                  class="how-it-works__step-marker"
+                  data-config-item="howItWorksMarkers"
+                  aria-hidden="true"
                   >03</span
                 >
-                <article class="how-it-works__card">
+                <article
+                  class="how-it-works__card"
+                  data-config-item="howItWorks"
+                >
                   <div class="how-it-works__card-icon" aria-hidden="true">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -2241,10 +2260,16 @@
               </div>
 
               <div class="how-it-works__step">
-                <span class="how-it-works__step-marker" aria-hidden="true"
+                <span
+                  class="how-it-works__step-marker"
+                  data-config-item="howItWorksMarkers"
+                  aria-hidden="true"
                   >04</span
                 >
-                <article class="how-it-works__card">
+                <article
+                  class="how-it-works__card"
+                  data-config-item="howItWorks"
+                >
                   <div class="how-it-works__card-icon" aria-hidden="true">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -2293,16 +2318,14 @@
               <p class="how-it-works__summary-text">
                 <span
                   class="how-it-works__summary-lines how-it-works__summary-lines-desktop"
+                  data-config="sections.howItWorks.summary.0.text"
+                  >You share your needs and goals.</span
                 >
-                  You share your needs<br aria-hidden="true" />
-                  and goals.
-                </span>
                 <span
                   class="how-it-works__summary-lines how-it-works__summary-lines-mobile"
+                  data-config="sections.howItWorks.summary.0.text"
+                  >You share your needs and goals.</span
                 >
-                  You share your<br aria-hidden="true" />
-                  needs and goals.
-                </span>
               </p>
             </div>
             <div class="how-it-works__summary-item">
@@ -2325,17 +2348,14 @@
               <p class="how-it-works__summary-text">
                 <span
                   class="how-it-works__summary-lines how-it-works__summary-lines-desktop"
+                  data-config="sections.howItWorks.summary.1.text"
+                  >We compare options and explain your choices.</span
                 >
-                  We compare options<br aria-hidden="true" />
-                  and explain your choices.
-                </span>
                 <span
                   class="how-it-works__summary-lines how-it-works__summary-lines-mobile"
+                  data-config="sections.howItWorks.summary.1.text"
+                  >We compare options and explain your choices.</span
                 >
-                  We compare options<br aria-hidden="true" />
-                  and explain<br aria-hidden="true" />
-                  your choices.
-                </span>
               </p>
             </div>
             <div class="how-it-works__summary-item">
@@ -2358,17 +2378,14 @@
               <p class="how-it-works__summary-text">
                 <span
                   class="how-it-works__summary-lines how-it-works__summary-lines-desktop"
+                  data-config="sections.howItWorks.summary.2.text"
+                  >Together, we find coverage that fits your life.</span
                 >
-                  Together, we find coverage<br aria-hidden="true" />
-                  that fits your life.
-                </span>
                 <span
                   class="how-it-works__summary-lines how-it-works__summary-lines-mobile"
+                  data-config="sections.howItWorks.summary.2.text"
+                  >Together, we find coverage that fits your life.</span
                 >
-                  Together, we find<br aria-hidden="true" />
-                  coverage that<br aria-hidden="true" />
-                  fits your life.
-                </span>
               </p>
             </div>
           </div>
@@ -2381,7 +2398,6 @@
       <section
         class="testimonials"
         data-section="reviews"
-        id="testimonials-cta"
         aria-labelledby="testimonials-heading"
       >
         <div class="testimonials__bg" aria-hidden="true">
@@ -2477,7 +2493,7 @@
             <div class="swiper testimonials__swiper" data-swiper="reviews">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <article class="testimonial-card">
+                  <article class="testimonial-card" data-config-item="reviews">
                     <div
                       class="testimonial-card__stars"
                       aria-label="5 out of 5 stars"
@@ -2587,7 +2603,7 @@
                   </article>
                 </div>
                 <div class="swiper-slide">
-                  <article class="testimonial-card">
+                  <article class="testimonial-card" data-config-item="reviews">
                     <div
                       class="testimonial-card__stars"
                       aria-label="5 out of 5 stars"
@@ -2697,7 +2713,7 @@
                   </article>
                 </div>
                 <div class="swiper-slide">
-                  <article class="testimonial-card">
+                  <article class="testimonial-card" data-config-item="reviews">
                     <div
                       class="testimonial-card__stars"
                       aria-label="5 out of 5 stars"
@@ -2870,12 +2886,7 @@
       <div data-extension-slot="after-reviews"></div>
 
       <!-- FRONTLENS:SECTION:FAQ:START -->
-      <section
-        class="faq"
-        data-section="faq"
-        id="faq-cta"
-        aria-labelledby="faq-heading"
-      >
+      <section class="faq" data-section="faq" aria-labelledby="faq-heading">
         <div class="faq__bg" aria-hidden="true">
           <span class="faq__bg-blob faq__bg-blob--left"></span>
           <span class="faq__bg-dots faq__bg-dots--top"></span>
@@ -3053,7 +3064,7 @@
               </p>
             </div>
             <a
-              href="#consultation-cta"
+              href="#consultation"
               class="button button--primary faq__cta-btn"
               data-config="sections.faq.cta.button.href"
               data-config-attr="href"
@@ -3088,7 +3099,6 @@
       <section
         class="consultation"
         data-section="consultation"
-        id="consultation-cta"
         aria-labelledby="consultation-heading"
       >
         <div class="container">
@@ -3118,7 +3128,10 @@
               </p>
 
               <ul class="consultation__benefits">
-                <li class="consultation__benefit">
+                <li
+                  class="consultation__benefit"
+                  data-config-item="consultation"
+                >
                   <span class="consultation__benefit-icon" aria-hidden="true">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -3145,7 +3158,10 @@
                     >
                   </div>
                 </li>
-                <li class="consultation__benefit">
+                <li
+                  class="consultation__benefit"
+                  data-config-item="consultation"
+                >
                   <span class="consultation__benefit-icon" aria-hidden="true">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -3173,7 +3189,10 @@
                     >
                   </div>
                 </li>
-                <li class="consultation__benefit">
+                <li
+                  class="consultation__benefit"
+                  data-config-item="consultation"
+                >
                   <span class="consultation__benefit-icon" aria-hidden="true">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -3198,7 +3217,10 @@
                     >
                   </div>
                 </li>
-                <li class="consultation__benefit">
+                <li
+                  class="consultation__benefit"
+                  data-config-item="consultation"
+                >
                   <span class="consultation__benefit-icon" aria-hidden="true">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -3622,10 +3644,10 @@
                   <div class="consultation__form-row">
                     <div class="consultation-field">
                       <label
-                      for="consultation-first-name"
-                      data-config="sections.consultation.form.fields.firstName.label"
-                      >First Name</label
-                    >
+                        for="consultation-first-name"
+                        data-config="sections.consultation.form.fields.firstName.label"
+                        >First Name</label
+                      >
                       <div class="consultation-field__control">
                         <span
                           class="consultation-field__icon"
@@ -3655,16 +3677,18 @@
                           id="consultation-first-name"
                           type="text"
                           placeholder="First name"
+                          data-config="sections.consultation.form.fields.firstName.placeholder"
+                          data-config-attr="placeholder"
                           autocomplete="given-name"
                         />
                       </div>
                     </div>
                     <div class="consultation-field">
                       <label
-                      for="consultation-last-name"
-                      data-config="sections.consultation.form.fields.lastName.label"
-                      >Last Name</label
-                    >
+                        for="consultation-last-name"
+                        data-config="sections.consultation.form.fields.lastName.label"
+                        >Last Name</label
+                      >
                       <div class="consultation-field__control">
                         <span
                           class="consultation-field__icon"
@@ -3694,6 +3718,8 @@
                           id="consultation-last-name"
                           type="text"
                           placeholder="Last name"
+                          data-config="sections.consultation.form.fields.lastName.placeholder"
+                          data-config-attr="placeholder"
                           autocomplete="family-name"
                         />
                       </div>
@@ -3732,6 +3758,8 @@
                         id="consultation-email"
                         type="email"
                         placeholder="you@example.com"
+                        data-config="sections.consultation.form.fields.email.placeholder"
+                        data-config-attr="placeholder"
                         autocomplete="email"
                       />
                     </div>
@@ -3768,6 +3796,8 @@
                         id="consultation-phone"
                         type="tel"
                         placeholder="(555) 123-4567"
+                        data-config="sections.consultation.form.fields.phone.placeholder"
+                        data-config-attr="placeholder"
                         autocomplete="tel"
                       />
                     </div>
@@ -3808,6 +3838,8 @@
                         class="consultation__input consultation__input--textarea"
                         id="consultation-notes"
                         placeholder="How can we help you?"
+                        data-config="sections.consultation.form.fields.notes.placeholder"
+                        data-config-attr="placeholder"
                         rows="4"
                       ></textarea>
                     </div>
@@ -3916,7 +3948,6 @@
       <section
         class="final-cta"
         data-section="finalCta"
-        id="final-cta"
         aria-labelledby="final-cta-heading"
       >
         <div class="container">
@@ -3997,7 +4028,7 @@
 
                 <div class="final-cta__action">
                   <a
-                    href="#consultation-cta"
+                    href="#consultation"
                     class="button button--primary final-cta__btn"
                     data-config="sections.finalCta.cta.href"
                     data-config-attr="href"
@@ -4092,7 +4123,9 @@
                       />
                     </svg>
                   </span>
-                  <span class="final-cta__feature-label"
+                  <span
+                    class="final-cta__feature-label"
+                    data-config-item="finalCta"
                     >Free Consultation</span
                   >
                 </li>
@@ -4115,7 +4148,11 @@
                       <path d="m9 12 2 2 4-4" />
                     </svg>
                   </span>
-                  <span class="final-cta__feature-label">No Obligation</span>
+                  <span
+                    class="final-cta__feature-label"
+                    data-config-item="finalCta"
+                    >No Obligation</span
+                  >
                 </li>
                 <li class="final-cta__feature">
                   <span class="final-cta__feature-icon" aria-hidden="true">
@@ -4134,7 +4171,9 @@
                       <circle cx="12" cy="7" r="4" />
                     </svg>
                   </span>
-                  <span class="final-cta__feature-label"
+                  <span
+                    class="final-cta__feature-label"
+                    data-config-item="finalCta"
                     >Personalized Guidance</span
                   >
                 </li>
@@ -4150,10 +4189,10 @@
     <footer id="footer" data-section="footer">
       <div class="container">
         <div class="site-footer__card">
-          <div class="site-footer__main" id="contact-cta">
+          <div class="site-footer__main">
             <div class="footer__grid">
               <div class="footer__brand">
-                <a href="#health-cta" class="footer__brand-logo">
+                <a href="#hero" class="footer__brand-logo">
                   <img
                     src="assets/images/donordoc-new-logo.webp"
                     alt="DONORDOC"
@@ -4172,7 +4211,11 @@
                 </p>
                 <ul class="footer__social" aria-label="Social media links">
                   <li>
-                    <a href="#" aria-label="Facebook">
+                    <a
+                      href="#"
+                      aria-label="Facebook"
+                      data-config-item="footerSocial"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="18"
@@ -4192,7 +4235,11 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" aria-label="Instagram">
+                    <a
+                      href="#"
+                      aria-label="Instagram"
+                      data-config-item="footerSocial"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="18"
@@ -4221,7 +4268,11 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" aria-label="LinkedIn">
+                    <a
+                      href="#"
+                      aria-label="LinkedIn"
+                      data-config-item="footerSocial"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="18"
@@ -4243,7 +4294,11 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" aria-label="YouTube">
+                    <a
+                      href="#"
+                      aria-label="YouTube"
+                      data-config-item="footerSocial"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="18"
@@ -4304,11 +4359,11 @@
                   </button>
                   <div class="footer__nav-panel" data-footer-nav-panel hidden>
                     <ul class="footer__nav-list">
-                      <li><a href="#about-cta">About Us</a></li>
-                      <li><a href="#how-it-works-cta">How It Works</a></li>
-                      <li><a href="#consultation-cta">Our Advisors</a></li>
-                      <li><a href="#faq-cta">FAQ</a></li>
-                      <li><a href="#contact-cta">Contact Us</a></li>
+                      <li><a href="#about">About Us</a></li>
+                      <li><a href="#howItWorks">How It Works</a></li>
+                      <li><a href="#consultation">Our Advisors</a></li>
+                      <li><a href="#faq">FAQ</a></li>
+                      <li><a href="#footer">Contact Us</a></li>
                     </ul>
                   </div>
                 </div>
@@ -4394,7 +4449,7 @@
                     <ul class="footer__nav-list">
                       <li><a href="#">Health Insurance Basics</a></li>
                       <li><a href="#">Glossary</a></li>
-                      <li><a href="#faq-cta">FAQ</a></li>
+                      <li><a href="#faq">FAQ</a></li>
                       <li><a href="#">Helpful Guides</a></li>
                       <li><a href="#">Support Center</a></li>
                     </ul>
@@ -4554,11 +4609,11 @@
                 >
               </p>
               <nav class="site-footer__bar-links" aria-label="Legal links">
-                <a href="#">Privacy Policy</a>
+                <a href="#" data-config-item="footerLegal">Privacy Policy</a>
                 <span aria-hidden="true">|</span>
-                <a href="#">Terms of Service</a>
+                <a href="#" data-config-item="footerLegal">Terms of Service</a>
                 <span aria-hidden="true">|</span>
-                <a href="#">Site Map</a>
+                <a href="#" data-config-item="footerLegal">Site Map</a>
               </nav>
             </div>
           </div>

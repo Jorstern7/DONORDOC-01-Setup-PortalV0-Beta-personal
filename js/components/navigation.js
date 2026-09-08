@@ -41,21 +41,24 @@ export function initStickyHeader() {
 
 export function initNavScroll() {
   const sectionToNavHash = {
-    "health-cta": "#health-cta",
-    featured: "#health-cta",
-    "about-cta": "#about-cta",
-    "services-cta": "#services-cta",
-    "how-it-works-cta": "#how-it-works-cta",
-    "pricing-cta": "#services-cta",
-    "testimonials-cta": "#testimonials-cta",
-    "faq-cta": "#faq-cta",
-    "consultation-cta": "#consultation-cta",
-    "final-cta": "#final-cta",
-    "contact-cta": "#consultation-cta",
+    hero: "#hero",
+    trust: "#hero",
+    about: "#about",
+    services: "#services",
+    howItWorks: "#howItWorks",
+    pricing: "#services",
+    reviews: "#reviews",
+    faq: "#faq",
+    consultation: "#consultation",
+    finalCta: "#finalCta",
   };
 
-  const sections = Array.from(document.querySelectorAll("section[id]")).filter(
-    (s) => Object.prototype.hasOwnProperty.call(sectionToNavHash, s.id),
+  const sections = Array.from(document.querySelectorAll("[data-section]")).filter(
+    (s) =>
+      Object.prototype.hasOwnProperty.call(
+        sectionToNavHash,
+        s.getAttribute("data-section"),
+      ),
   );
 
   const navLinks = document.querySelectorAll(
@@ -69,6 +72,24 @@ export function initNavScroll() {
     linkMap[href].push(link);
   });
 
+  const sectionFromHash = (hash) => {
+    const key = (hash || "").replace(/^#/, "");
+    if (!key) return null;
+    return document.querySelector('[data-section="' + key + '"]');
+  };
+
+  const scrollToHash = (hash, behavior) => {
+    const key = (hash || "").replace(/^#/, "");
+    if (!key || key === "hero") {
+      window.scrollTo({ top: 0, behavior: behavior || "auto" });
+      return true;
+    }
+    const el = sectionFromHash(hash);
+    if (!el) return false;
+    el.scrollIntoView({ behavior: behavior || "auto", block: "start" });
+    return true;
+  };
+
   const getScrollAnchorPx = () => {
     const header = document.getElementById("header");
     const h = header ? header.offsetHeight : 0;
@@ -80,17 +101,18 @@ export function initNavScroll() {
     const docEl = document.documentElement;
     const scrollBottom = window.innerHeight + window.scrollY;
 
-    let activeHash = "#health-cta";
+    let activeHash = "#hero";
 
     const atBottom = scrollBottom >= docEl.scrollHeight - 2;
     if (atBottom) {
-      activeHash = "#consultation-cta";
+      activeHash = "#consultation";
     } else {
       for (let i = 0; i < sections.length; i++) {
         const section = sections[i];
         const rect = section.getBoundingClientRect();
         if (rect.top <= anchorPx) {
-          activeHash = sectionToNavHash[section.id] || activeHash;
+          const key = section.getAttribute("data-section");
+          activeHash = sectionToNavHash[key] || activeHash;
         }
       }
     }
@@ -105,6 +127,27 @@ export function initNavScroll() {
       group.forEach((l) => l.classList.add("active"));
     }
   };
+
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link) return;
+    const href = link.getAttribute("href");
+    if (!href || href === "#") return;
+    if (!sectionFromHash(href) && href !== "#hero") return;
+    event.preventDefault();
+    history.pushState(null, null, href);
+    scrollToHash(href, "auto");
+  });
+
+  window.addEventListener("popstate", () => {
+    scrollToHash(location.hash, "auto");
+  });
+
+  window.addEventListener("load", () => {
+    if (location.hash === "#hero") window.scrollTo(0, 0);
+  });
+
+  if (location.hash) scrollToHash(location.hash, "auto");
 
   const throttledUpdate = throttle(updateActiveNav, 50);
   window.addEventListener("scroll", throttledUpdate, { passive: true });
