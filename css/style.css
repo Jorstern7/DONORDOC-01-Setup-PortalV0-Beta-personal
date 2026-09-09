@@ -1242,9 +1242,6 @@ main .services .service-card__desc {
   line-height: 1.5;
   color: #666666;
 }
-main .services .service-card__desc-short {
-  display: none;
-}
 main .services .services__cta {
   display: flex;
   justify-content: center;
@@ -1316,12 +1313,6 @@ main .services .services__cta-btn:hover svg.icon-tabler-arrow-right, main .servi
   main .services .service-card__desc {
     font-size: 14px;
     line-height: 1.45;
-  }
-  main .services .service-card__desc-full {
-    display: none;
-  }
-  main .services .service-card__desc-short {
-    display: inline;
   }
   main .services .services__break-mobile {
     display: block;

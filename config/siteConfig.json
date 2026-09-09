@@ -111,8 +111,7 @@
         {
           "id": "preventiveCare",
           "title": "Preventive Care",
-          "description": "Stay ahead of health issues with routine screenings and wellness visits.",
-          "shortDescription": "Stay ahead with routine screenings and wellness visits."
+          "description": "Stay ahead of health issues with routine screenings and wellness visits."
         },
         {
           "id": "hospitalCoverage",

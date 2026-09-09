@@ -233,6 +233,14 @@ function applyIndexed(section, selector, items, writer) {
   });
 }
 
+function configField(el, name) {
+  return el.querySelector('[data-config-field="' + name + '"]');
+}
+
+function configFields(el, name) {
+  return el.querySelectorAll('[data-config-field="' + name + '"]');
+}
+
 function applySectionLists(config) {
   const sections = config.sections || {};
 
@@ -241,8 +249,8 @@ function applySectionLists(config) {
     '[data-config-item="trust"]',
     sections.trust?.stats,
     function (el, item) {
-      const value = el.querySelector(".trust__stat-value");
-      const label = el.querySelector(".trust__stat-label");
+      const value = configField(el, "value");
+      const label = configField(el, "label");
       if (value) value.textContent = item.value;
       if (label) label.textContent = item.label;
     },
@@ -253,8 +261,8 @@ function applySectionLists(config) {
     '[data-config-item="trustBenefits"]',
     sections.trust?.benefits,
     function (el, item) {
-      const title = el.querySelector(".trust__benefit-title");
-      const desc = el.querySelector(".trust__benefit-desc");
+      const title = configField(el, "title");
+      const desc = configField(el, "description");
       if (title) title.textContent = item.title;
       if (desc) desc.textContent = item.description;
     },
@@ -277,14 +285,10 @@ function applySectionLists(config) {
     '[data-config-item="services"]',
     sections.services?.items,
     function (el, item) {
-      const title = el.querySelector(".service-card__title");
-      const full = el.querySelector(".service-card__desc-full");
-      const short = el.querySelector(".service-card__desc-short");
-      const desc = el.querySelector(".service-card__desc");
+      const title = configField(el, "title");
+      const desc = configField(el, "description");
       if (title) title.textContent = item.title;
-      if (full) full.textContent = item.description;
-      if (short) short.textContent = item.shortDescription || item.description;
-      if (!full && desc) desc.textContent = item.description;
+      if (desc) desc.textContent = item.description;
     },
   );
 
@@ -293,13 +297,13 @@ function applySectionLists(config) {
     '[data-config-item="pricing"]',
     sections.pricing?.plans,
     function (el, item) {
-      const name = el.querySelector(".pricing-card__title");
-      const desc = el.querySelector(".pricing-card__desc");
-      const badge = el.querySelector(".pricing-card__badge");
-      const prefix = el.querySelector(".pricing-card__price-label");
-      const amount = el.querySelector(".pricing-card__price-amount");
-      const suffix = el.querySelector(".pricing-card__price-period");
-      const cta = el.querySelector(".pricing-card__btn");
+      const name = configField(el, "name");
+      const desc = configField(el, "description");
+      const badge = configField(el, "badge");
+      const prefix = configField(el, "prefix");
+      const amount = configField(el, "amount");
+      const suffix = configField(el, "suffix");
+      const cta = configField(el, "cta");
       if (name) name.textContent = item.name;
       if (desc) desc.textContent = item.description;
       if (badge) badge.textContent = item.badge || "";
@@ -333,9 +337,9 @@ function applySectionLists(config) {
       return all.concat(group.steps || []);
     }, []);
     applyIndexed(how, '[data-config-item="howItWorks"]', steps, function (el, step) {
-      const number = el.querySelector(".how-it-works__card-number");
-      const title = el.querySelector(".how-it-works__card-title");
-      const desc = el.querySelector(".how-it-works__card-desc");
+      const number = configField(el, "number");
+      const title = configField(el, "title");
+      const desc = configField(el, "description");
       if (number) number.textContent = step.number;
       if (title) title.textContent = step.title;
       if (desc) desc.textContent = step.description;
@@ -347,9 +351,9 @@ function applySectionLists(config) {
 
   const advisor = document.querySelector('[data-config-item="advisorCta"]');
   if (advisor && sections.pricing?.advisorCta) {
-    const title = advisor.querySelector(".pricing-advisor-cta__title");
-    const desc = advisor.querySelector(".pricing-advisor-cta__desc");
-    const button = advisor.querySelector(".pricing-advisor-cta__btn");
+    const title = configField(advisor, "headline");
+    const desc = configField(advisor, "description");
+    const button = configField(advisor, "button");
     if (title) title.textContent = sections.pricing.advisorCta.headline;
     if (desc) desc.textContent = sections.pricing.advisorCta.description;
     if (button) {
@@ -365,12 +369,12 @@ function applySectionLists(config) {
     '[data-config-item="reviews"]',
     sections.reviews?.items,
     function (el, item) {
-      const quote = el.querySelector(".testimonial-card__text");
-      const name = el.querySelector(".testimonial-card__name");
-      const role = el.querySelector(".testimonial-card__role");
-      const status = el.querySelector(".testimonial-card__status");
-      const img = el.querySelector(".testimonial-card__avatar");
-      const stars = el.querySelector(".testimonial-card__stars");
+      const quote = configField(el, "quote");
+      const name = configField(el, "name");
+      const role = configField(el, "clientType");
+      const status = configField(el, "enrollmentText");
+      const img = configField(el, "image");
+      const stars = configField(el, "rating");
       if (quote) quote.textContent = "\u201C" + item.quote + "\u201D";
       if (name) name.textContent = item.name;
       if (role) role.textContent = item.clientType;
@@ -394,8 +398,8 @@ function applySectionLists(config) {
     '[data-config-item="consultation"]',
     sections.consultation?.benefits,
     function (el, item) {
-      const title = el.querySelector("strong");
-      const desc = el.querySelector("span:not([aria-hidden])");
+      const title = configField(el, "title");
+      const desc = configField(el, "description");
       if (title) title.textContent = item.title;
       if (desc) desc.textContent = item.description;
     },
@@ -417,10 +421,9 @@ function applySectionLists(config) {
       el.setAttribute("aria-label", item.label);
     });
     applyIndexed(footer, "[data-footer-nav-group]", sections.footer.linkGroups, function (el, group) {
-      const heading = el.querySelector(".footer__nav-heading");
-      const trigger = el.querySelector(".footer__nav-trigger-label");
-      if (heading) heading.textContent = group.title;
-      if (trigger) trigger.textContent = group.title;
+      configFields(el, "title").forEach(function (node) {
+        node.textContent = group.title;
+      });
       applyIndexed(el, "[data-footer-nav-panel] a", group.links, function (link, item) {
         link.setAttribute("href", item.href);
         link.textContent = item.label;
@@ -430,8 +433,8 @@ function applySectionLists(config) {
       el.setAttribute("href", item.href);
       el.textContent = item.label;
     });
-    const phone = footer.querySelector('.footer__contact-list a[href^="tel:"]');
-    const email = footer.querySelector('.footer__contact-list a[href^="mailto:"]');
+    const phone = configField(footer, "phone");
+    const email = configField(footer, "email");
     if (phone && sections.footer.contact?.phone) {
       phone.setAttribute("href", sections.footer.contact.phone.href);
       setTextPreserveChildren(phone, sections.footer.contact.phone.display);
@@ -439,12 +442,6 @@ function applySectionLists(config) {
     if (email && sections.footer.contact?.email) {
       email.setAttribute("href", "mailto:" + sections.footer.contact.email);
       setTextPreserveChildren(email, sections.footer.contact.email);
-    }
-    const desc = footer.querySelector(".footer__brand-desc");
-    if (desc && sections.footer.description) desc.textContent = sections.footer.description;
-    const secure = footer.querySelector(".site-footer__bar-secure");
-    if (secure && sections.footer.secureNote) {
-      setTextPreserveChildren(secure, sections.footer.secureNote);
     }
   }
 }
