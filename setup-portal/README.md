@@ -4,7 +4,7 @@ License: For personal/business use only. Redistribution, resale, or sublicensing
 
 Frontlens Portal metadata for DONORDOC-01. It stays in this development tree for PART 2. The Website System does not load this directory. Taking it out of the customer copy is a later step.
 
-`setupPortalSchema.js` is `websiteSystemId` DONORDOC-01, `schemaVersion` 2.
+`setupPortalSchema.js` is `websiteSystemId` DONORDOC-01, `schemaVersion` 1.
 
 A group contains `groups` or `fields`. Branding, Theme, SEO & Social Sharing, and Navigation are top-level. `sections` contains the section groups. Group ids, field ids, and paths match schema version 1, except legal links.
 

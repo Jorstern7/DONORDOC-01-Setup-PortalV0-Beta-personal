@@ -6,7 +6,7 @@ License: For personal/business use only. Redistribution, resale, or sublicensing
 
 export const setupPortalSchema = {
   websiteSystemId: "DONORDOC-01",
-  schemaVersion: 2,
+  schemaVersion: 1,
   destinationRules: {
     formats: {
       bareAnchor: "^#$",
